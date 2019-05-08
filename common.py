@@ -2,7 +2,7 @@ import requests
 import random
 
 def xproxy():
-    API = 'http://api.xdaili.cn/xdaili-api//greatRecharge/getGreatIp?spiderId=a31f8cd494e343d69b51b303859ac446&orderno=YZ2018112517118ojIuo&returnType=2&count=5'
+    API = 'Your Proxy api'
     results = requests.get(url=API).json()['RESULT']
     agents = ["http://{}:{}".format(res['ip'], res['port']) for res in results]
     proxies = {
